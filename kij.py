@@ -53,7 +53,7 @@ print("Mechanism 2 => E(PUa, [N1 || N2])")
 N2 = os.urandom(16)
 print("N2: ", binascii.hexlify(N2))
 
-BtoA_2 = N2
+BtoA_2 = N1 + N2
 print("BtoA_2: ", binascii.hexlify(BtoA_2))
 
 PUa = RSA.importKey(open('A_public_key.pem').read())
